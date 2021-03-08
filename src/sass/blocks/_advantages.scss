@@ -1,8 +1,9 @@
 .advantages {
     padding: 70px 0 80px 0;
     background-color: #f6f6f6;
-    &__wrapper {
-        margin-top: 65px;
+    &__list {
+        @include ul-reset;
+        margin-top: 100px;
         display: flex;
         justify-content: space-between;
     }
@@ -10,25 +11,64 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 238px;
+        max-width: 235px;
     }
-    &__subtitle {
+    &__item-title {
+        position: relative;
         margin-top: 38px;
         color: #0d0d0d;
         font-size: 18px;
         font-weight: 700;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        &--cup {
+            &::before {
+                position: absolute;
+                content: "";
+                width: 70px;
+                height: 70px;
+                top: -85px;
+                left: 40px;
+                background-image: url("../icons/cup.png");
+            }
+        }
+        &--heart {
+            &::before {
+                position: absolute;
+                content: "";
+                width: 70px;
+                height: 70px;
+                top: -85px;
+                left: 60px;
+                background-image: url("../icons/heart.png");
+            }
+        }
+        &--shoe {
+            &::before {
+                position: absolute;
+                content: "";
+                width: 70px;
+                height: 70px;
+                top: -85px;
+                left: 20px;
+                background-image: url("../icons/shoe.png");
+            }
+        }
     }
-    &__descr {
-        margin-top: 26px;
+    &__item-description {
+        padding: 0;
         color: #0d0d0d;
         font-size: 14px;
         font-weight: 300;
         text-align: center;
-        a {
-            color: #ff0000;
-            text-decoration: underline;
-        }
     }
+    &__item-link {
+        color: #ff0000;
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
+    
     &__icon {
         &_animated {
             animation: heartbeat 1.5s ease infinite;

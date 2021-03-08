@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пульсоксиметр</title>
+    <title>Пульсометр</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body>
-    <header class="header">
-      <div class="container">
+    <div class="container">
+      <header class="header">
         <a class="header__logo">
-          <img class="header__logo-img" src="icons/logo.svg" width="251" height="45" alt="Логотип сайта">
+          <img class="header__logo-img" src="icons/logo.png" width="251" height="45" alt="Логотип сайта">
         </a>
         <p class="header__representative">Официальный представитель
           <span>Garmin, Polar, Sunnto</span>
@@ -24,33 +24,41 @@
             Заказать звонок
           </button>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
     <main class="main">
-      <h1 class="visually-hidden">Продажа пульсоксиметров</h1>
+      <h1 class="visually-hidden">Продажа пульсометров</h1>
       <section class="main__promo promo">
         <div class="container">
-          <h2 class="promo__title">
-            Подбор пульсоксиметра
-            <span class="promo__subtitle">с учетом вашего уровня подготовки</span>
-          </h2>
-          <ul class="promo__list">
-            <li class="promo__item">Время подбора: 10 минут</li>
-            <li class="promo__item">Бесплатная доставка</li>
-            <li class="promo__item">Ответим на все вопросы</li>
-          </ul>
-          <button class="promo__button button button--main">Заказать консультацию</button>
-          <p class="promo__text">или <a class="promo__link">перейти в каталог</a></p>
+          <div class="promo__content">
+            <h2 class="promo__title">
+              Подбор пульсометра
+              <span class="promo__subtitle">с учетом вашего уровня подготовки</span>
+            </h2>
+            <ul class="promo__list">
+              <li class="promo__item">
+                <p class="promo__item-text promo__item-text--time">Время подбора: 10 минут</p>
+              </li>
+              <li class="promo__item">
+                <p class="promo__item-text promo__item-text--delivery">Бесплатная доставка</p>
+              </li>
+              <li class="promo__item">
+                <p class="promo__item-text promo__item-text--questions">Ответим на все вопросы</p>
+              </li>
+            </ul>
+            <button class="promo__button button button--main">Заказать консультацию</button>
+            <p class="promo__text">или <a href="#" class="promo__link">перейти в каталог</a></p>
+          </div>
         </div>
       </section>
-      <section class="main__advntages advantages">
+      <section class="main__advantages advantages">
         <div class="container">
           <h2 class="advantages__title title">
             Наши преимущества
           </h2>
           <ul class="advantages__list">
             <li class="advantages__item">
-              <h3 class="advantages__item-title">Делимся опытом</h3>
+              <h3 class="advantages__item-title advantages__item-title--cup">Делимся опытом</h3>
               <p class="advantages__item-description">
                 Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают полумарафоны, переплыли
                 Босфор,
@@ -58,49 +66,48 @@
               </p>
             </li>
             <li class="advantages__item">
-              <h3 class="advantages__item-title">Заботимся о здоровье</h3>
+              <h3 class="advantages__item-title advantages__item-title--heart">Заботимся о здоровье</h3>
               <p class="advantages__item-description">
                 Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и
                 Вашим близким!
               </p>
             </li>
             <li class="advantages__item">
-              <h3 class="advantages__item-title">Учим бегать</h3>
+              <h3 class="advantages__item-title advantages__item-title--shoe">Учим бегать</h3>
               <p class="advantages__item-description">
-                Помогаем с обучением правильной технике бега! Дружим с крупнейшей школой бега в России - <a
+                Помогаем с обучением правильной технике бега! Дружим с крупнейшей школой бега в России - <a href="#"
                   class="advantages__item-link">i love running</a>
               </p>
             </li>
           </ul>
         </div>
       </section>
-      <section class="main__consultations consultations">
+      <section class="main__consultation consultation">
         <div class="container">
-          <h2 class="consultations__title">
-            Получите бесплатную консультацию по подбору консультацию по подбору пульсоксиметра
+          <h2 class="consultation__title title title--left">
+            Получите бесплатную консультацию по подбору пульсоксиметра
           </h2>
-          <p class="consultations__text">
-            Просто заполните форму заявки и мы перезвоним вам в течении 10 минут
+          <p class="consultation__text">
+            Просто заполните форму заявки и&nbsp;мы&nbsp;перезвоним вам в течении 10 минут
           </p>
-          <form class="consultations__form form" action="https://echo.htmlacademy.ru" method="post">
+          <form class="consultation__form form" action="https://echo.htmlacademy.ru" method="post">
             <div class="form__input-wrapper">
               <div class="form__row">
                 <label for="name" class="visually-hidden">Имя</label>
-                <input class="form__user" type="text" id="name" name="name" placeholder="Ваше имя" autocomplete="on"
+                <input class="form__input" type="text" id="name" name="name" placeholder="Ваше имя" autocomplete="on"
                   required="">
               </div>
               <div class="form__row">
                 <label class="visually-hidden" for="phone">Укажите Ваш номер телефона</label>
-                <input class="form__phone" type="tel" id="phone" name="phone" placeholder="Ваш телефон"
-                  autocomplete="on" required="">
+                <input class="form__input" placeholder="Ваш телефон" autocomplete="on" required="">
               </div>
               <div class="form__row">
                 <label class="visually-hidden" for="login-email">Почта</label>
-                <input class="form__email" type="email" id="login-email" name="email" placeholder="Ваш E-mail"
+                <input class="form__input" type="email" id="login-email" name="email" placeholder="Ваш E-mail"
                   autocomplete="on">
               </div>
             </div>
-            <button class="consultations__button button button--submit" type="submit">
+            <button class="consultation__button button button--submit" type="submit">
               Заказать консультацию
             </button>
           </form>
@@ -547,9 +554,8 @@
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1737.0267448501186!2d37.64624047364648!3d55.76831563990905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2sua!4v1559894689029!5m2!1sru!2sua"
         allowfullscreen></iframe>
-
-      <div class="footer__info">
-        <div class="container">
+      <div class="container">
+        <div class="footer__info">
           <address class="footer__addr">Москва, Мясницкий проезд, д.3с1</address>
           <a class="footer__phone" href="tel:84999228974">8 (499) 922-89-74</a>
           <div class="footer__social">

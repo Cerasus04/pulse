@@ -1,22 +1,30 @@
 .promo {
+    margin-top: -173px;
     min-height: 650px;
     padding: 0;
     padding-bottom: 93px;
     background: url("../img/main.jpg") center (center/cover) no-repeat;    
-    &__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    &__content {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        margin-top: 90px;
+        width: 504px;
+        margin-left: auto;
     }
-    &__header {
+      
+    &__title {
+        padding-top: 50px;
         color: #ffffff;
         font-size: 42px;
         font-weight: 700;
         text-transform: uppercase;
         line-height: 42px;
     }
-    &__subheader {
+    &__subtitle {
         margin-top: 17px;
         color: #ffffff;
         font-size: 24px;
@@ -24,33 +32,79 @@
         font-weight: 500;
         text-transform: uppercase;
     }
-    &__icons {
-        margin-top: 65px;
+    &__list {
+        @include ul-reset;
+        margin-top: 75px;        
         width: 425px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between;        
     }
-    &__icon {
+    &__item {        
         width: 108px;
         text-align: center;
         color: #ffffff;
         font-size: 14px;
-        font-weight: 500;
-        img {
-            display: block;
-            margin: 0 auto;
-            margin-bottom: 20px;
+        font-weight: 500;    
+    }
+    &__item-text { 
+        position: relative;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        &--time {
+            &::before {
+                position: absolute;
+                content: "";
+                width: 42px;
+                height: 46px;
+                top: -55px;
+                left: 30px;
+                background-image: url("../icons/timer.png");
+            }
+        }
+    
+        &--delivery {
+            &::before {
+                position: absolute;
+                content: "";
+                width: 44px;
+                height: 45px;
+                top: -55px;
+                left: 30px;
+                background-image: url("../icons/hand-cart.png");
+            }
+        }
+
+        &--questions {
+            &::before {
+                position: absolute;
+                content: "";
+                width: 45px;
+                height: 42px;
+                top: -55px;
+                left: 30px;
+                background-image: url("../icons/messages.png");
+            }
         }
     }
-    &__link {
+
+    &__text {
         color: #ffffff;
         font-size: 16px;
         font-weight: 500;
         margin-top: 18px;
-        a {
-            color: #ffffff;
-            text-transform: uppercase;
-            text-decoration: underline;
+    }
+
+    &__link {
+        color: #ffffff;
+        text-transform: uppercase;
+        text-decoration: underline;
+
+        &:hover,
+        &:focus {
+            color: $main-color;
         }
     }
+    
 }
