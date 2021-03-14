@@ -26,20 +26,20 @@
         &:hover {
             box-shadow: 3px 3px 20px $main-color;
             border: none;
-        }
-        div {
-            transform: skewX(25deg);
-        }
+        }        
         &--active {
-            color: #fff;
+            color: #ffffff;
             background-color: $main-color;
             border: none;
         }
     }
-    &__content {
+    &__tabs-text {
         margin: 0;
-        padding: 0;
-        list-style: none;
+        transform: skewX(25deg);
+    }
+    &__content {
+        @include ul-reset;
+
         margin-top: 60px;
         display: none;
         justify-content: space-between;
