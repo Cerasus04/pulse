@@ -46,7 +46,7 @@
                 <p class="promo__item-text promo__item-text--questions">Ответим на все вопросы</p>
               </li>
             </ul>
-            <button class="promo__button button button--main">Заказать консультацию</button>
+            <button class="promo__button button button--main" data-modal="consultation">Заказать консультацию</button>
             <p class="promo__text">или <a href="#" class="promo__link">перейти в каталог</a></p>
           </div>
         </div>
@@ -90,20 +90,21 @@
           <p class="consultation__text">
             Просто заполните форму заявки и&nbsp;мы&nbsp;перезвоним вам в течении 10 минут
           </p>
-          <form class="consultation__form form" action="https://echo.htmlacademy.ru" method="post">
+          <form class="consultation__form form" id="consultation-form">
             <div class="form__input-wrapper">
               <div class="form__row">
-                <label for="name" class="visually-hidden">Имя</label>
-                <input class="form__input" type="text" id="name" name="name" placeholder="Ваше имя" autocomplete="on"
-                  required="">
+                <label for="consultation-name" class="visually-hidden">Имя</label>
+                <input class="form__input" type="text" id="consultation-name" name="name" placeholder="Ваше имя"
+                  autocomplete="on">
               </div>
               <div class="form__row">
-                <label class="visually-hidden" for="phone">Укажите Ваш номер телефона</label>
-                <input class="form__input" placeholder="Ваш телефон" autocomplete="on" required="">
+                <label class="visually-hidden" for="consultation-phone">Укажите Ваш номер телефона</label>
+                <input class="form__input" id="consultation-phone" name="phone" placeholder="Ваш телефон"
+                  autocomplete="on">
               </div>
               <div class="form__row">
-                <label class="visually-hidden" for="login-email">Почта</label>
-                <input class="form__input" type="email" id="login-email" name="email" placeholder="Ваш E-mail"
+                <label class="visually-hidden" for="consultation-email">Почта</label>
+                <input class="form__input" type="email" id="consultation-email" name="email" placeholder="Ваш E-mail"
                   autocomplete="on">
               </div>
             </div>
@@ -613,35 +614,62 @@
     <div class="overlay">
       <div class="modal" id="consultation">
         <div class="modal__close">&times;</div>
-        <div class="modal__subtitle">Просто заполните форму заявки</div>
-        <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
-        <form class="feed-form feed-form_mt25" action="#">
-          <input name="name" placeholder="Ваше имя" type="text">
-          <input name="phone" placeholder="Ваш телефон">
-          <input name="email" placeholder="Ваш E-mail" type="email">
-
-          <button class="button button_submit">заказать консультацию</button>
+        <p class="modal__subtitle">Просто заполните форму заявки</p>
+        <p class="modal__descr">и мы перезвоним вам в течении 10 минут</p>
+        <form class="modal__form form form--mt25">
+          <div class="form__input-wrapper">
+            <div class="form__row">
+              <label for="modal-name" class="visually-hidden">Имя</label>
+              <input class="form__input" type="text" id="modal-name" name="name" placeholder="Ваше имя"
+                autocomplete="on">
+            </div>
+            <div class="form__row">
+              <label class="visually-hidden" for="modal-phone">Укажите Ваш номер телефона</label>
+              <input class="form__input" id="modal-phone" name="phone" placeholder="Ваш телефон" autocomplete="on">
+            </div>
+            <div class="form__row">
+              <label class="visually-hidden" for="modal-email">Почта</label>
+              <input class="form__input" type="email" id="modal-email" name="email" placeholder="Ваш E-mail"
+                autocomplete="on">
+            </div>
+          </div>
+          <button class="modal__button button button--submit" type="submit">
+            Заказать консультацию
+          </button>
         </form>
       </div>
 
       <div class="modal" id="order">
         <div class="modal__close">&times;</div>
-        <div class="modal__subtitle">Ваш заказ:</div>
-        <div class="modal__descr">Пульсометр Polar FT1</div>
-        <form class="feed-form feed-form_mt25" action="#">
-          <input name="name" required placeholder="Ваше имя" type="text">
-          <input name="phone" required placeholder="Ваш телефон">
-          <input name="email" required placeholder="Ваш E-mail" type="email">
-
-          <button class="button button_submit">купить</button>
+        <p class="modal__subtitle">Ваш заказ:</p>
+        <p class="modal__descr">Пульсометр Polar FT1</p>
+        <form class="modal__form form form--mt25">
+          <div class="form__input-wrapper">
+            <div class="form__row">
+              <label for="name" class="visually-hidden">Имя</label>
+              <input class="form__input" type="text" id="name" name="name" placeholder="Ваше имя" autocomplete="on">
+            </div>
+            <div class="form__row">
+              <label class="visually-hidden" for="phone">Укажите Ваш номер телефона</label>
+              <input class="form__input" id="phone" name="phone" placeholder="Ваш телефон" autocomplete="on">
+            </div>
+            <div class="form__row">
+              <label class="visually-hidden" for="login-email">Почта</label>
+              <input class="form__input" type="email" id="login-email" name="email" placeholder="Ваш E-mail"
+                autocomplete="on">
+            </div>
+          </div>
+          <button class="consultation__button button button--submit" type="submit">
+            Заказать консультацию
+          </button>
         </form>
       </div>
 
       <div class="modal modal_mini" id="thanks">
         <div class="modal__close">&times;</div>
-        <div class="modal__subtitle">Спасибо за вашу заявку!</div>
-        <div class="modal__descr">Наш менеджер свяжется с вами
-          в ближайшее время!</div>
+        <p class="modal__subtitle">Спасибо за вашу заявку!</p>
+        <p class="modal__descr">Наш менеджер свяжется с вами
+          в ближайшее время!</p>
       </div>
     </div>
 
@@ -652,6 +680,8 @@
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/script.js"></script>
 
   </body>
