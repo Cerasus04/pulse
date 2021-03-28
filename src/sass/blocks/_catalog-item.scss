@@ -5,6 +5,7 @@
     padding: 20px 20px 26px 20px;
     overflow: hidden;
     margin-bottom: 20px;
+    margin-right: 25px;
     &__img {
         display: block;
         margin: 0 auto;
@@ -126,5 +127,8 @@
         &:hover {
             color: $main-color;
         }
+    }
+    &:nth-child(3n + 3) {
+        margin-right: 0;
     }
 }

@@ -42,10 +42,10 @@
 
         margin-top: 60px;
         display: none;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-wrap: wrap;
         &--active {
             display: flex;
-        }
+        }        
     }
 }

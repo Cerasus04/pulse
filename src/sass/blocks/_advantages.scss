@@ -42,6 +42,8 @@
                 top: -85px;
                 left: 60px;
                 background-image: url("../icons/heart.png");
+                
+                animation: heartbeat 1.5s ease infinite;
             }
         }
         &--shoe {
