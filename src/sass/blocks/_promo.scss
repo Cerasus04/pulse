@@ -108,3 +108,16 @@
     }
     
 }
+
+@media(max-width: $desktop-width) {
+    .promo {
+        &__content {
+             align-items: center;
+             margin: 0 auto;
+        }
+    }
+}
+
+@media(max-width: $mobile-width) {
+    
+}

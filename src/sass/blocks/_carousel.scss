@@ -22,3 +22,32 @@
         left: auto;
     }
 }
+
+@media(max-width: $desktop-width) {
+    .carousel {
+        &__inner {
+            width: 600px;
+        }
+    } 
+    
+    .slick-dots {
+        @include ul-reset;
+        display: flex;
+        width: 150px;
+        margin: 30px auto 0;
+        justify-content: space-between;
+        & button {
+            font-size: 0;
+            padding: 0;
+        }
+        & li button {
+            border: 0;
+            width: 12px;
+            height: 12px;
+            background-color: gray;
+        }
+        & .slick-active button{
+            background: $main-color;
+        }
+    }
+}

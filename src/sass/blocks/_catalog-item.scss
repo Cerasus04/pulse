@@ -132,3 +132,17 @@
         margin-right: 0;
     }
 }
+
+@media (max-width: $desktop-width) {
+    .catalog-item {
+       margin-right: 67px;
+
+       &:nth-child(3n + 3) {
+           margin-right: 67px;
+       }
+
+       &:nth-child(2n) {
+           margin-right: 0;
+       }
+    }
+}

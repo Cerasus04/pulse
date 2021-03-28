@@ -42,7 +42,7 @@
                 top: -85px;
                 left: 60px;
                 background-image: url("../icons/heart.png");
-                
+
                 animation: heartbeat 1.5s ease infinite;
             }
         }
@@ -77,6 +77,14 @@
             &:hover {
                 animation-play-state: paused;
             }
+        }
+    }
+}
+
+@media(max-width: $desktop-width) {
+    .advantages {
+        &__item {
+            max-width: 200px;
         }
     }
 }
