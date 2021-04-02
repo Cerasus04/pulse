@@ -132,3 +132,11 @@
         }
     }
 }
+
+@media(max-width: $mobile-width) {
+    .promo {
+        &__button {
+            width: 260px;
+        }
+    }
+}
