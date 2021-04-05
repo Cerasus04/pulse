@@ -34,3 +34,10 @@
         color: $main-color;
     }
 }
+
+@media (max-width: $mobile-width) {
+    .form {
+        min-width: $min-width;
+        width: 100%;
+    }
+}

@@ -59,6 +59,7 @@
 
 @media(max-width: $mobile-width) {
     .header {
+        min-width: $min-width;
         &__wrapper {
             flex-direction: column;
         }

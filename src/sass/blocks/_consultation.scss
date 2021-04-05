@@ -12,3 +12,13 @@
         font-weight: 500;
     }
 }
+
+@media (max-width: $mobile-width) {
+    .consultation {
+        min-width: $min-width;
+        padding-top: 50px;
+        &__text {
+            font-size: 18px;
+        }
+    }
+}
