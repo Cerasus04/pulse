@@ -50,7 +50,15 @@
     }
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: $desktop-width) {
+    .catalog {
+        &__content {
+            justify-content: space-around;
+        }
+    }
+}
+
+@media (max-width: $tablet-width) {
    .catalog {
        min-width: $min-width;       
        &__tab {
@@ -62,6 +70,6 @@
        }
        &__tabs {
            margin-top: 40px;
-       }
+       }       
    } 
 }

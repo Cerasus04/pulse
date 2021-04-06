@@ -36,8 +36,7 @@
 }
 
 @media (max-width: $mobile-width) {
-    .form {
-        min-width: $min-width;
+    .form {        
         width: 100%;
     }
 }

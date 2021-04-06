@@ -60,3 +60,16 @@
 
     }
 }
+
+@media (max-width: $mobile-width) {
+    .reviews {
+        &__blockquote {
+            padding: 200px 0 0;
+
+            &::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}

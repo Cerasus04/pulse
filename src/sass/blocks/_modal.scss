@@ -46,3 +46,14 @@
 #consultation, #order, #thanks {
     display: none;
 }
+
+@media (max-width: $mobile-width) {
+    .modal {
+        top: 25vh;
+        width: calc(100% - 20px);
+        padding: 30px 20px;
+        &__close {
+            right: 0;
+        }
+    }
+}
