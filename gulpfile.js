@@ -76,7 +76,7 @@ gulp.task('images', function () {
 });
 
 function deploy(cb) {
-  ghPages.publish(path.join(process.cwd(), './build'), cb);
+  ghPages.publish(path.join(process.cwd(), './dist'), cb);
 }
 exports.deploy = deploy;
 
